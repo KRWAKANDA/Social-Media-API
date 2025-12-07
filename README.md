@@ -1,6 +1,6 @@
-# Social Media API
+# YoYo Social Media API
 
-A RESTful Social Media API built with **Django** and **Django REST Framework (DRF)**.
+A RESTful Social Media API 
 This API allows users to register, create posts, follow other users, and view a feed of posts from followed users. It also implements JWT authentication for secure access.
 
 ---
@@ -37,71 +37,7 @@ This API allows users to register, create posts, follow other users, and view a 
 
 ---
 
-## **Project Structure**
 
-```
-social_api/
-├─ social_api/
-│  ├─ settings.py
-│  └─ urls.py
-├─ users/
-│  ├─ models.py
-│  ├─ serializers.py
-│  ├─ views.py
-│  └─ urls.py
-├─ posts/
-│  ├─ models.py
-│  ├─ serializers.py
-│  ├─ views.py
-│  └─ urls.py
-└─ manage.py
-```
-
----
-
-## **Setup & Installation**
-
-1. **Clone the repository**
-
-```bash
-git clone <YOUR_REPO_URL>
-cd social_api
-```
-
-2. **Create a virtual environment and activate**
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
-```
-
-3. **Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-4. **Apply migrations**
-
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-5. **Create a superuser**
-
-```bash
-python manage.py createsuperuser
-```
-
-6. **Run the server**
-
-```bash
-python manage.py runserver
-```
-
----
 
 ## **API Endpoints**
 
@@ -110,7 +46,7 @@ python manage.py runserver
 * `POST /api/token/` → Obtain JWT token
 * `POST /api/token/refresh/` → Refresh JWT token
 
-### **Users**
+### Users
 
 * `POST /api/users/register/` → Register new user
 * `GET /api/users/<id>/` → Get user details
@@ -119,7 +55,7 @@ python manage.py runserver
 * `POST /api/users/follow/` → Follow a user
 * `DELETE /api/users/unfollow/<username>/` → Unfollow a user
 
-### **Posts**
+### Posts
 
 * `GET /api/posts/` → List all posts
 * `POST /api/posts/` → Create a new post
@@ -130,7 +66,7 @@ python manage.py runserver
 
 ---
 
-## **Authentication**
+## Authentication
 
 All protected endpoints require the JWT token in the request headers:
 
@@ -140,26 +76,9 @@ Authorization: Bearer <your_token_here>
 
 ---
 
-## **Testing**
 
-You can use **Postman** or **curl** to test API endpoints.
-Example using curl:
 
-```bash
-# Register a user
-curl -X POST http://127.0.0.1:8000/api/users/register/ \
--H "Content-Type: application/json" \
--d '{"username": "testuser", "email": "test@example.com", "password": "testpass"}'
-
-# Get JWT token
-curl -X POST http://127.0.0.1:8000/api/token/ \
--H "Content-Type: application/json" \
--d '{"username": "testuser", "password": "testpass"}'
-```
-
----
-
-## **Next Steps**
+## Next Steps
 
 * Implement likes and comments
 * Add media uploads to cloud storage (e.g., AWS S3)
@@ -168,7 +87,7 @@ curl -X POST http://127.0.0.1:8000/api/token/ \
 
 ---
 
-## **License**
+## License
 
 This project is for educational purposes and does not have a commercial license.
 
