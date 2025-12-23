@@ -94,4 +94,4 @@ This project is for educational purposes and does not have a commercial license.
 ---
 
 **Author:** Tyrone Kedidimetse Rantlhoatlhoa
-**Project:** Capstone Social Media API
+**Project:** YoYo Social Media 
