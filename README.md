@@ -15,11 +15,13 @@ This API allows users to register, create posts, follow other users, and view a 
 * **Feed**: View posts from users you follow in reverse chronological order.
 * **Authentication**: JWT-based authentication for secure API access.
 * **Pagination**: Paginated post lists and feeds for efficient browsing.
+* **News Api **: A section on the YoYO platform that shows current news from an aPi news platform.
 
+   
 ### Optional Stretch Goals (Future Enhancements)
 
 * Likes and comments
-* Media uploads (images/videos to cloud storage)
+* Media uploads (
 * Hashtags and mentions
 * Notifications
 * Direct messaging
@@ -81,7 +83,6 @@ Authorization: Bearer <your_token_here>
 ## Next Steps
 
 * Implement likes and comments
-* Add media uploads to cloud storage (e.g., AWS S3)
 * Implement notifications and messaging
 * Deploy API on Heroku or PythonAnywhere
 
