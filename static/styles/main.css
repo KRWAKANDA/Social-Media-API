@@ -1,4 +1,4 @@
-
+/* ------------------  Global Styling ------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 
@@ -7,12 +7,12 @@
   }
 
 body{
-    background-color: rgb(6, 9, 22);
+    background-color: rgba(232,233,239,1);
     font-family: 'Roboto', sans-serif;
 }
 
 
-
+/* ------------------  Register Page ------------------ */
 
 #form-container{
     width: 400px;
@@ -44,7 +44,7 @@ body{
 
 #welcome-message p{
     font-size: 16px;
-    color: rgb(71, 79, 131);
+    color: rgb(97, 98, 105);
     font-weight: 300;
 }
 

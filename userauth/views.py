@@ -119,10 +119,10 @@ def likes(request, id):
 
         post.save()
 
-        # Generate the URL for the current post's detail page
+       
         print(post.id)
 
-        # Redirect back to the post's detail page
+       
         return redirect('/#'+id)
     
 @login_required(login_url='/loginn')
@@ -251,6 +251,9 @@ def lobby(request):
 def room(request):
     return render(request, 'room.html')
 
+def explore(request):
+    return render(request, 'explore.html')
+
 
 def getToken(request):
     appId = "1ad1c3d380984c8c9969a78fd4323219"
@@ -301,22 +304,18 @@ def deleteMember(request):
     member.delete()
     return JsonResponse('Member deleted', safe=False)
 
+import requests
+
 def News(request):
-  url='https://newsapi.org/v2/everything?q=cricket&from=2025-01-26&sortBy=publishedAt&apiKey=2083f73f530e4bd68be6fc672cd27cf6'
-  cricket_news = requests.get(url).json()
+    url = 'https://newsapi.org/v2/everything?q=cricket&from=2025-01-26&sortBy=publishedAt&apiKey=f750fba369bc43cab7f65b03e10c678a'
+    response = requests.get(url)
 
-  a = cricket_news['articles']
-  desc = []
-  title = []
-  img = []
+    if response.status_code != 200:
+        articles = []
+    else:
+        data = response.json()
+        articles = data.get('articles', [])
 
-  for i in range(len(a)):
-    f = a[i]
-    title.append(f['title'])
-    desc.append(f['description'])
-    img.append(f['urlToImage'])
+    return render(request, 'news.html', {'articles': articles})
 
-  mylist = zip(title,desc,img)
-  context = {'mylist':mylist}
 
-  return render(request, 'News.html', context)
