@@ -15,7 +15,7 @@ This API allows users to register, create posts, follow other users, and view a 
 * **Feed**: View posts from users you follow in reverse chronological order.
 * **Authentication**: JWT-based authentication for secure API access.
 * **Pagination**: Paginated post lists and feeds for efficient browsing.
-* **News Api **: A section on the YoYO platform that shows current news from an aPi news platform.
+* **News Api **: A section on the YoYO platform that shows current news from an aPi news platform ,newsapi.org
 
    
 ### Optional Stretch Goals (Future Enhancements)
